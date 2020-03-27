@@ -2,7 +2,6 @@
 import csv
 
 # Declare variables
-net_total = 0
 change_list = []
 dates = []
 values = []
@@ -27,7 +26,6 @@ total_profit = sum(values)
 # increase and decrease (date & amount) for entire period
 for idx, (date, value) in enumerate(zip(dates[1:], values[1:])):
     change = value - values[idx]
-    #print(f'{date} - {values[idx]} - {value} - {change}')
     change_list.append(change)
     if change_list[idx] == max(change_list):
         greatest_increase = change
